@@ -6,13 +6,23 @@
     z-index: 2;
 
   }
-
-#mainbackground {
-    background-color: rgb(255, 255, 255);
+  #mainbackground {
     position: relative;
-    
-
+    width: 100%;
+    height: 100vh; /* Hauteur de la vidéo */
+    overflow: hidden; /* Pour éviter que la vidéo ne déborde */
 }
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour couvrir tout le conteneur avec la vidéo */
+    z-index: 0; /* Placez la vidéo en arrière-plan */
+}
+
 #menuwrap{
 
     height: 80px;
@@ -20,8 +30,11 @@
     position: fixed;
     margin-left: 20px;
     margin-top: 20px;
+    
 
 }
+
+
 
 nav{
     display:flex;
@@ -39,7 +52,7 @@ nav{
     width: 3rem;
     background-position: center; 
     background-repeat: no-repeat;
-    border: solid rgb(255, 255, 255);
+    border: transparent;
     background-size: cover;
 
     
@@ -50,7 +63,7 @@ nav{
   width: 4rem;
   background-position: center; 
   background-repeat: no-repeat;
-  border: solid rgb(255, 255, 255);
+  border: transparent;
   background-size: cover;
   transition: 1s;
 
@@ -58,16 +71,16 @@ nav{
 }
 
 #oiseau{
-  background-image:url(./oiseau.gif);
+  background-image:url(./[removal.ai]_507fbb42-b4c2-4766-a576-a78a2f0289ad-insta-logo.png);
 }
 
 
 #ciel{
-  background-image:url(./ciel\ chelou.gif);
+  background-image:url(./[removal.ai]_df71aadf-7f18-434a-8c77-f9c022cc8116-64cebe06bc8437de66e41758_x-everythingapp-logo-black-twitter.png);
 }
 
 #X1C{
-  background-image:url(./Xl1C.gif);
+  background-image:url(./logo-linkedin-noir-removebg-preview.png);
 }
 
 #maintext {
@@ -160,7 +173,7 @@ nav{
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
      7px 7px 20px 0px rgba(0,0,0,.1),
      4px 4px 5px 0px rgba(0,0,0,.1);
-     transition: 1s;
+     transition: 0.1s;
 }
 
 
@@ -174,11 +187,20 @@ nav{
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
-   transition: 1s;
+   transition: 0.1s;
 }
 #email{
-      margin-left: 13rem;
+      margin-left: 22rem;
 }
+#email a {
+  color: white; /* Définit la couleur du texte en blanc */
+  text-decoration: none; /* Supprime la décoration du lien */
+}
+
+#email a:hover {
+  color: #ffffffda; /* Change la couleur quand on survole */
+  text-decoration:dotted; /* Ajoute une décoration quand on survole */ 
+   }
 
 #boutons2{
     position: absolute;
@@ -196,9 +218,12 @@ nav{
 .TextBtn{
   font-family: sans-serif;
   -webkit-text-stroke: 0.3px rgb(255, 255, 255);
-
+  text-decoration-color: rgb(248, 248, 248);
+  
 
 }
+
+
 
 /*Boutoun Animation */
 
@@ -313,7 +338,7 @@ nav{
   html {
     width: 100% ;
     height: 100% ;
-    background: radial-gradient(center, #FFF 0%, #CCC 70%, #CCC 100%) no-repeat;
+    background: radial-gradient(center, #000000 0%, #CCC 70%, #CCC 100%) no-repeat;
   }
   
   
@@ -323,6 +348,7 @@ nav{
     font-size: 1.5em;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+   
   }
   
   .wrapper {
@@ -341,7 +367,7 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: transparent;
     z-index: 2;
 
   }
@@ -389,12 +415,22 @@ nav{
   
   .menu__list__item a {
     text-decoration: none;
-    color: rgb(38, 36, 36);
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 1.5em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
+    font-weight: bold;
     position: fixed;
 
+  }
+  .menu__list__item a:hover {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: fixed;
+    -webkit-text-stroke: 1px white;
   }
   
   .menu__list__item {
@@ -551,5 +587,12 @@ nav{
 
   .next {
     right: -50px;
+  }
+
+  #email{
+   margin-left: 0.5rem;
+  }
+  .video{
+    opacity: 0;
   }
 }
